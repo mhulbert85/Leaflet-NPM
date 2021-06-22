@@ -5,3 +5,16 @@
     height: 300px;
     width: 300px;
 }
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    min-height: 100vh;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.menu {
+    padding: 0.5rem 0;
+}

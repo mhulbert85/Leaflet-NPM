@@ -1,4 +1,8 @@
 class MapsController < ApplicationController
-  def index
+  def marker
+  end
+
+  def markers 
+    @places = Place.all
   end
 end

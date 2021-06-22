@@ -11,7 +11,31 @@ Leaflet is the leading open-source JavaScript library for mobile-friendly intera
 ### Packages
 - leaflet
 - jQuery
-- resolve-url-loader   **used for precompiling images in npm packages**
+- resolve-url-loader   _**for precompiling images in npm packages**_
+
+#### Files Edited 
+
+```
+├── controllers
+│   └── maps_controller.rb
+├── javascript
+│   ├── images
+│   ├── packs
+│   │   ├── application.js
+│   │   └── leaflet.js
+│   └── stylesheets
+│       ├── application.scss
+│       └── vendor
+│           └── leaflet.scss
+├── models
+│   └── place.rb
+└── views
+│   └── maps
+│       └── index.html.erb
+│ 
+└── webpack
+    └── environment.js 
+```
 
 ### Instructions
 If you wish to clone this repository and run locally you will need to:
@@ -20,13 +44,5 @@ If you wish to clone this repository and run locally you will need to:
 #### Prerequisites
 - Rails 6.1
 
-#### TODO
-- Create example of Leaflet with multiple markers connected to postgresql 
-
-
-pages edited
-`config/webpack/environment.js`
-`app/javascript/packs/applicaion.js`
-`app/javascript/packs/leaflet.js`
-`app/javascript/stylesheets/applicaion.scss`
-`app/javascript/stylesheets/vendor/leaflet.scss`
+##### TODO:
+- Create example with multiple markers and connect to places table
