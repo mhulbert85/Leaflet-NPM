@@ -43,6 +43,3 @@ If you wish to clone this repository and run locally you will need to:
 
 #### Prerequisites
 - Rails 6.1
-
-##### TODO:
-- Create example with multiple markers and connect to places table
