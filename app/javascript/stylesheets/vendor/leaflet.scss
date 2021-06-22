@@ -1,0 +1,7 @@
+@import '~leaflet/dist/leaflet'; // Leaflet npm
+
+// Leaflet map must have height
+#map {
+    height: 300px;
+    width: 300px;
+}
