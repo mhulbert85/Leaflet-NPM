@@ -1,5 +1,4 @@
 $(function () {
-  console.log('javascript loaded');
 
   /*** Leaflet NPM ***/
 
@@ -51,13 +50,21 @@ $(function () {
     map.addLayer(marker);
   }
 
+  // If map contains class 'multiple' loop through all places and append makers to map
+  // else show one hardcoded map marker
   if ($('#map').hasClass('multiple')) {
-    addMarkerToMap("Byron Bay", lat, lng)
-    addMarkerToMap("Not Byron", lat, 153.4)
-    addMarkerToMap("Not Byron", lat, 153.2)
-    addMarkerToMap("Not Byron", lat, 153)
+    $.ajax({
+      url: "/markers/",
+      dataType: "json",
+      success: function (data) {
+        for (let i = 0; i < data.length; i++) {
+          const place = data[i];
+          addMarkerToMap(place["title"], place["lat"], place["lng"]);
+        }
+      }
+    });
   } else {
     addMarkerToMap("Byron Bay", lat, lng)
   }
 
-})
+});
